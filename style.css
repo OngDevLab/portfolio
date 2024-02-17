@@ -1,14 +1,30 @@
 /* everything settings */
 body {
-    margin: 0;     
+    margin: 0; 
+    display:flex;
+    flex-direction: column;    
   }
   html{
     font-family: 'Courier New', Courier, monospace;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: blueviolet;
+    padding:4px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
 /* heading */
 .heading{
     padding:8px;
+    padding-right:20px;
     border-bottom:2px;
     border-top:0px;
     border-left:0px;
@@ -18,10 +34,11 @@ body {
     margin: 0px;
     display:flex;
     position:fixed;
-    margin-top: -110px;
     width:100%;
     background-color: rgb(244, 255, 244);
     align-items: center;
+    flex:1;
+    justify-content: center;
 }
 .title{
     flex:6;
@@ -33,24 +50,34 @@ body {
     justify-content: center;
     font-size: 130%;
     margin:8px;
+    padding: 8px;
 }
 
 /* content global styling */
 .contents{
     margin-top:110px;
+    display:flex;
+    flex:auto;
+
 }
 
 /* sidebar styling */
+.sidebar{
+    flex:1;
+}
 .sidebarImage{
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 68px;
+    max-height: 68px;
     margin:8px;
+    margin-top:16px;
     border-radius: 8px;
+    
     
 }
 
 .careerContainer{
     display:flex;
+    padding-right: 10px;
 }
 
 .job{
@@ -60,18 +87,45 @@ body {
 .careerJourney,
 .projects{
     background-color: aliceblue;
-    border-radius: 8px;
     padding:5px;
     margin-left: 5px;
     border:1px;
     border-style: inset;
     border-color: black;
-    margin-bottom:10px;
+    margin-bottom:3px;
+}
+.careerJourney{
+    border-top-left-radius:16px;
+    border-top-right-radius:16px;
 }
 
 .projects{
+    border-bottom-left-radius:16px;
+    border-bottom-right-radius:16px;
     background-color: rgb(255, 240, 245);
 }
+
+/* current view styling */
+.currentView{
+    flex:10;
+    background-color:rgba(255, 252, 228, 0.193);
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 18px;
+    padding:20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-height: 68vh;
+}
+/* footer styling */
+.footer{
+    flex:1;
+    justify-self: center;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 
 
 
