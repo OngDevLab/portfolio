@@ -116,6 +116,33 @@ a:hover{
     padding:20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     min-height: 68vh;
+    font-size: larger;
+}
+.viewInformation{
+    display:flex;
+}
+.viewHeader{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 2px;
+    border-style:dotted;
+    border-radius: 20px;
+    padding: 16px;
+}
+
+.viewImage{
+    max-width: 168px;
+    max-height: 168px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.viewTitle{
+    margin:16px;
+}
+.viewSummary{
+    margin-right: 26px;
 }
 /* footer styling */
 .footer{
@@ -125,6 +152,8 @@ a:hover{
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+
 
 
 
