@@ -138,11 +138,20 @@ a:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
-.viewTitle{
+.viewTitle,
+.viewSubtitle{
     margin:16px;
 }
 .viewSummary{
     margin-right: 26px;
+}
+#frontTitle{
+    margin-left:32px;
+    margin-bottom: 0px;
+}
+#frontSubtitle{
+    margin-left:32px;
+    margin-top: 0px;
 }
 /* footer styling */
 .footer{
