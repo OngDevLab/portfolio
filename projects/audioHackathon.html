@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Ong Portfolio Page</title>
         <link rel="stylesheet" type="text/css" href="https://ongdevlab.github.io/portfolio/style.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="/style.css" /> -->
     </head>
     <body>
         <div class="heading">
@@ -86,11 +87,106 @@
                 </div>
             </div>
             <div class="currentView">
-                Audio Hackathon
+                <div class="viewHeader">
+                    <img class="viewImage" src="https://ongdevlab.github.io/portfolio/images/melSpectrogram.jpg" alt="TikTok Logo">
+                    <h1 class="viewTitle">Winning P&G's 2023 Deep Learning Hackathon</p>
+                </div>
+                <div class="viewInformation">
+                    <div class="viewSummary">
+                        <h4>Every year, P&G held a hackathon where the top data scientists
+                            in P&G would compete in a machine learning task. In 2023, 
+                            the task was to classify audio samples as running water or noise.
+                            This is useful for behavioral research studies and sustainability
+                            studies. The competition consisted of over 100 participating data 
+                            scientists. I came in first place overall. 
+                        </h4>
+                        <h3>The process I used to win the hackathon: </h3>
+                        <ul>
+                            <li><strong>Clean Training Data: </strong> 
+                                The data provided had many artifiacts and misclassifications.
+                                I manually combed the data and created a filtering function to 
+                                remove incorrect samples. I also recorded my own sample data 
+                                to enhance my training dataset.
+                            </li>
+                            <br>
+                            <li><strong>Physics: </strong>
+                                Since the data was for detecting when a person would open 
+                                or shut off a faucet, I timed and calculated the rise time 
+                                for the action, resulting in having the optimal window size 
+                                for my audio samples. 
+                            </li>
+                            <br>
+                            <li><strong>Using the full depth of data available: </strong>
+                                The standard approach to audio classification was to 
+                                bucket data into small samples, and doing a grid search of 
+                                different frequency bands and building a simple classifier. 
+                                Instead of this approach, I used the VGG19 transfer learning 
+                                image classifier and used the mel spectrogram audio representation 
+                                (this is the thumbnail image) and fed that result into the classifier.
+                                The spectrogram allowed for time and frequency representations to 
+                                be represented in the data.
+                            </li>
+                            <br>
+                            <li><strong>Big, Big Supercomputer: </strong>
+                                Since I was a Kubernetes admin for the cluster, I had 
+                                access to over three V100 GPU's and eight T4 GPU's. With 
+                                this compute power, I was able to run and build my model in 
+                                a weekend. 
+                            </li>
+                            <br>
+                            <li><strong>Tuned Mass Damper inspired Mean Smoothing: </strong>
+                                I had used traditional mean smoothing techniques, but kept
+                                seeing the smoothing fail in a predictable way. 
+                                After seeing the pattern of the fails, I realized that the failure 
+                                looked like the graph of a tuned mass damper equation from my engineering
+                                days. After implementing the function, the smoothing improved my classification
+                                by five percent.
+                            </li>
+                            <br>
+                            <li><strong>The Results: </strong>
+                                97% F1 Score, over 10% gap in accuracy compared to runner up.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="viewSkills">
+                        <h3>Skills Utilized:</h3>
+                        <ul>
+                            <li><strong>Data Science: </strong>
+                                This project had many components of the data science
+                                workflow. I had to do the data cleaning and acquisition,
+                                find domain expertise, build the best suited model, and filter
+                                the output noise. 
+                            </li>
+                            <br>
+                            <li><strong>Communication and Collaboration: </strong>
+                                During the hackathon, I had to find many experts from inside 
+                                the company and from external resources. In addition, I had to
+                                then take a tour at the end of competition to present to various
+                                executives in the company. 
+                            </li>
+                            <br>
+                            <li><strong>Digital Signal Processing</strong>
+                                Having experience in electrical engineering and DSP (Digital
+                                Signal Processing) gave me a leg up in the competition. understanding
+                                the reasoning behind not compressing to mp3, building fourier transforms,
+                                and other filtering tricks allowed me to focus my time on the ML/AI tasks
+                                at hand and not on the basic theory. 
+                            </li>
+                        </ul>
+                        <h3>Tech Stack:</h3>
+                        <ul>
+                            <li><strong>Python/Pandas</strong></li>
+                            <li><strong>Tensorflow/Keras</strong></li>
+                            <li><strong>Excel/PowerPoint</strong></li>
+                            <li><strong>Supercomputer</strong></li>
+                            <li><strong>Managing Expectations</strong></li> 
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="footer">
-            Made with 💖 By OngDevLab
+            <p>Made with 💖 By OngDevLab</p>
         </div>
     </body>
 </html>
